@@ -1,0 +1,138 @@
+.hero-section {
+    min-height: 100vh;
+    background-color: #0F0F0F;
+    background-image: url('/assets/images/Texture.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    // padding-left: 64px;
+    // padding-right: 64px;
+    padding: 150px 64px 100px 64px;
+    gap: 45px;
+}
+
+
+.hero-title {
+    color: white;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -2;
+}
+
+
+
+.features-card {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 64px;
+    opacity: 0px;
+    background: rgba(148, 148, 148, 0.0509803922);
+    border: 0.4px solid;
+    border: 0.4px solid linear-gradient(180deg, rgba(130, 130, 130, 0.5) 0%, rgba(130, 130, 130, 0.175) 100%);
+    // -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 220px 44px rgba(255, 255, 255, 0.0509803922);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    .accordion-items {
+        .accordion-item {
+            background-color: #0f0f0f00;
+            color: white;
+            border: solid #606060 ;
+            border-width: 0px 0px 1px 0px;
+            padding: 20px 10px;
+        }
+
+        .ngb-accordion-title {
+            font-family: Inter !important;
+            font-size: 24px !important;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: -0.07em;
+            text-align: left;
+            color: white;
+            background-color: #0f0f0f00;
+            box-shadow: none;
+
+        }
+
+        .ngb-accordion-title::after {
+            flex-shrink: 0;
+            margin-left: auto;
+            content: "";
+            background-image: url('/assets/icons/arrow-faq.png');
+            background-repeat: no-repeat;
+            background-size: var(--bs-accordion-btn-icon-width);
+            transition: var(--bs-accordion-btn-icon-transition);
+
+        }
+
+    }
+
+
+
+
+
+}
+
+.features-card-title {
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: center;
+    color: white;
+
+    span {
+        background: -webkit-linear-gradient(180deg, #F9E785 0%, #A87A20 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .img-laptop {
+        width: 100%;
+    }
+
+    .hero-section {
+        padding: 20px;
+        padding-top: 100px;
+        height: max-content;
+
+        .hero-title {
+            font-size: 30px;
+        }
+
+        .see-more-btn {
+            align-self: center;
+        }
+
+        .hero-title,
+        .hero-description {
+            width: 100%;
+            text-align: center;
+        }
+
+        .features-card-title {
+            font-size: 34px;
+        }
+
+
+
+        .features-card {
+            margin-top: 40px;
+            padding: 10px 10px 40px 10px !important;
+            
+        }
+
+
+
+    }
+}

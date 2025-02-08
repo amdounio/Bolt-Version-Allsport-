@@ -1,0 +1,73 @@
+<ion-content>
+  <div class="container">
+  <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+      <div>
+          <label class="btn match-btn logo-section d-flex align-items-center justify-content-between ">
+              <input (change)="uploadImage($event)" type="file">
+              <img [src]="this.user.photoUrl" alt="profil">
+          </label>
+          <div class="icon-container d-flex align-items-center justify-content-center">
+              <i class="fa-regular fa-pen-to-square"></i>
+          </div>
+      </div>
+      <p class=" plan text-white m-0">compte : <span class="text-warning">{{this.user.plan ? this.user.plan : 'Free'}}</span></p>
+
+  </div>
+
+  <div   [formGroup]="form" class="d-flex flex-column align-items-center justify-content-center gap-4 w-100 mt-4">
+    <!-- <div class="d-flex align-items-center justify-content-center gap-4">
+        <hr class="divider-line m-0"> <p class="divider-text m-0">or</p> <hr class="divider-line m-0">
+    </div> -->
+    
+    <div class="row g-3 w-100 gap-2">
+        <div class="col-12 p-0">
+            <input type="email" formControlName="firstName" class="form-control" id="firstName" placeholder="exemple@email.com">
+          </div>
+          <div class="col-md-12 p-0">
+              <input type="text" formControlName="lastName"  class="form-control" id="lastName">
+            </div>
+          <div class="col-md-12 p-0">
+              <input type="text" formControlName="businessName" class="form-control" id="businessName">
+            </div>
+          <div class="col-md-12 p-0">
+              <input type="text" formControlName="email" class="form-control" id="email">
+            </div>
+          <div class="col-md-12 p-0">
+              <input type="text" formControlName="adresse" class="form-control" id="adresse">
+            </div>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+       <button class="btn submit-btn" (click)="submit()">save</button>
+    </div>
+</div>
+
+  <!-- <div class="d-flex align-items-center flex-column gap-3 w-100 mt-4 mb-4">
+      <div class="sports-section d-flex flex-column p-2" >
+          <p class="label m-0">Nom Prénom</p>
+          <p class="data-text m-0">{{user.firstName}} {{user.lastName}}</p>
+      </div>
+      <div class="sports-section d-flex flex-column p-2 " >
+          <p class="label m-0">Etablissement</p>
+          <p class="data-text m-0">{{user.businessName}}</p>
+      </div>
+      <div class="sports-section d-flex flex-column p-2 " >
+          <p class="label m-0">Email</p>
+          <p class="data-text m-0">{{user.email}}</p>
+      </div>
+      <div class="sports-section d-flex flex-column p-2" >
+          <p class="label m-0">Adresse</p>
+          <p class="data-text m-0">{{user.adresse}}</p>
+      </div>
+      <div class="sports-section d-flex flex-column p-2 subscription-btn" routerLink="">
+          <p class="label m-0">Abonnement</p>
+          <p class="data-text m-0">{{user.plan ? user.plan : 'Free' }}</p>
+      </div>
+      
+
+      <button class="btn logout-btn" (click)="logout()">Se déconnecter</button>
+  </div> -->
+
+
+ 
+</div>
+</ion-content>

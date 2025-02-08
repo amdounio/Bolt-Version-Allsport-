@@ -1,0 +1,4 @@
+<div *ngIf="message"  class="notification"
+    [ngClass]="{'popup': show, 'popout': !show,'success' : type === notificationEnum.SUCSESS, 'error': type === notificationEnum.ERROR, 'info' :  type === notificationEnum.INFO, 'warning':  type === notificationEnum.WARNING}">
+    {{ message }}
+</div>

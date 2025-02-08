@@ -1,0 +1,363 @@
+.login-section {
+    background-color: #0F0F0F;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    .login-card {
+        background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
+        padding: 32px 32px 32px 32px;
+        gap: 48px;
+        border-radius: 30px;
+        border: 0.3px;
+
+        .logo {
+            width: 89px;
+        }
+
+        .title-card {
+            font-family: 'Blair ITC';
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: left;
+            color: white;
+            text-transform: uppercase;
+
+        }
+
+        .description-card {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 19.6px;
+            text-align: left;
+            color: white;
+
+
+        }
+
+        .sso-btn {
+            border: 1px solid #ffffff;
+            padding: 16px 32px 16px 32px;
+            border-radius: 15px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            gap: 10px;
+            width: 100%;
+
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .divider-line {
+            background-color: #FFFFFF;
+            width: 250px;
+            color: #FFFFFF;
+            height: 1px;
+        }
+
+        .divider-text {
+
+            color: white;
+        }
+
+        .steper-page-number {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            color: white;
+        }
+
+
+
+        .form-label {
+            color: white;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16.8px;
+            text-align: left;
+
+        }
+
+        .form-control {
+            padding: 16px 16px 16px 16px;
+            border-radius: 10px;
+            border: 1px solid #ffffff;
+            color: white;
+            background-color: #0d0d0d00;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 16.8px;
+            text-align: left;
+
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.644);
+        }
+
+        .accept-checkbox {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 2px solid #ddd;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .accept-checkbox::after {
+            content: "\2713";
+            /* Unicode for check mark */
+            color: #0B0B0B;
+            display: none;
+            font-weight: bold;
+        }
+
+        .accept-checkbox:checked::after {
+            display: block;
+        }
+
+        .submit-btn {
+            padding: 12px 12px 12px 12px;
+            border-radius: 15px;
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22.4px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            gap: 10px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .remember-me-txt {
+            font-family: Inter;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            color: #FFFFFF99;
+           
+        }
+
+        .picsum-img-wrapper {
+            display: flex;
+            height: 790px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px
+        }
+
+        .have-account-text {
+            color: white;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22.4px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        .forgot-password-link {
+            color: white;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22.4px;
+            text-decoration: none;
+        }
+
+
+    }
+}
+
+
+.landing-page{
+    background-color: black;
+    height: 100vh;
+    background-image: url('/assets/images/mobile-background.png');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .logo{
+        width: 151px;
+    }
+    
+    
+
+    
+    .form-label {
+        color: white;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.8px;
+        text-align: left;
+
+    }
+
+    .form-control {
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        color: white;
+        background-color: #0d0d0d00;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 16.8px;
+        text-align: left;
+
+    }
+
+    .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.644);
+    }
+
+    .accept-checkbox {
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 2px solid #ddd;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accept-checkbox::after {
+        content: "\2713";
+        /* Unicode for check mark */
+        color: #0B0B0B;
+        display: none;
+        font-weight: bold;
+    }
+
+    .accept-checkbox:checked::after {
+        display: block;
+    }
+
+    .submit-btn {
+        padding: 6px 25px;
+        border-radius: 15px;
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22.4px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        gap: 10px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .remember-me-txt {
+        font-family: Inter;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 16.8px;
+        text-align: left;
+        color: #ffffff;
+        a{
+            text-decoration:none !important;
+            color:white !important;
+        }
+    }
+
+    .forgot-password-link {
+        color: white;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22.4px;
+        text-decoration: none;
+    }
+    .sso-btn {
+        border: 1px solid #ffffff;
+        padding: 16px 32px 16px 32px;
+        border-radius: 15px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.6px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        gap: 10px;
+        width: 50%;
+
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .have-account-text {
+        color: white;
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 22.4px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+
+}
+
+.carousel-inner {
+    border-radius: 30px !important;
+}

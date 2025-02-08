@@ -1,0 +1,84 @@
+<div class="card">
+    <div class="card-body">
+        <!-- Header Section -->
+        <div *ngIf="showHeader" class="row m-3 heading">
+            <div *ngIf="showHeader.pageSize" class="col-lg-5 d-flex align-items-center">
+                <select class="form-select mr-3" [(ngModel)]="pageSize" (ngModelChange)="updateData()"
+                        aria-label="table size" style="width: 20%;">
+                    <option *ngFor="let sizes of tablePageSizes" [value]="sizes">
+                        {{ sizes }}
+                    </option>
+                </select>
+                <p class="m-2"> entries per page</p>
+            </div>
+            <div *ngIf="showHeader.inputSearch" class="col-lg-6">
+                <input type="text" id="inputText" (keyup)="updateData()" [(ngModel)]="filter"
+                       placeholder="search"
+                       class="form-control">
+            </div>
+            <div *ngIf="headerActions.length > 0" class="col-lg-1">
+                <button *ngFor="let action of headerActions" type="button" [class]="action.class" data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="{{action?.tooltip}}" (click)="performHeaderActions(action.action)">
+                    <i [class]="action.icon"></i>
+                    {{ action.label }}
+                </button>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <div class="table-responsive">
+                <table class="table table-hover datatable">
+                    <thead>
+                    <tr>
+                        <th *ngIf="selectable"></th>
+                        <th *ngFor="let column of columns" [class]="column.className">{{ column.header }}</th>
+                        <th *ngIf="actions.length > 0">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngIf="data && !spinner">
+                    <tr *ngFor="let item of data.content">
+                        <td *ngIf="selectable">
+                            <input type="checkbox" class="form-check-input"
+                                   (change)="toggleRowSelection(item)"
+                                   [checked]="isRowSelected(item)" />
+                        </td>
+                        <td *ngFor="let column of columns" [class]="column.className" [innerHtml]="item | nestedProperty: column"></td>
+                        <td *ngIf="actions.length > 0">
+                            <button *ngFor="let action of actions" type="button" [class]="action.class" data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="{{action?.tooltip}}"
+                                    (click)="performAction(action.action, item)">
+                                <i [class]="action.icon"></i>
+                                {{ action.label }}
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- Spinner -->
+            <ng-container *ngIf="spinner">
+                <spinner></spinner>
+            </ng-container>
+
+            <!-- No Items Found -->
+            <div *ngIf="!spinner && data.totalElements === 0" class="no-items-found">
+                No items found
+            </div>
+
+            <!-- Pagination -->
+            <ng-container *ngIf="!spinner && data.totalElements > pageSize && showPagination">
+                <ngb-pagination class="d-flex justify-content-center"
+                                [page]="data.pageable.pageNumber + 1"
+                                [pageSize]="data.size || 10"
+                                [maxSize]="5"
+                                [collectionSize]="data.totalElements || 0"
+                                (pageChange)="updateData($event)"
+                ></ngb-pagination>
+            </ng-container>
+        </div>
+    </div>
+</div>

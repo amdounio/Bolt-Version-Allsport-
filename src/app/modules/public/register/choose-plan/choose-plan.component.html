@@ -1,0 +1,227 @@
+<ion-content>
+    <div class="login-section">
+        <app-heading [title]="title" [subTitle]="subTitle"></app-heading>
+    </div>
+    <section class="login-section d-flex flex-column align-items-center">
+        
+        <div class="custom-container d-flex align-items-center justify-content-center">
+            <div class="login-card d-flex flex-column align-items-center justify-content-center">
+                <div class="plan-card">
+                    <a routerLink="/register/user-description" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                </div>
+
+                <div class="d-flex flex-wrap cards-layout justify-content-between align-items-start">
+
+                    <div class="card plan-card text-white" >
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h2 class="card-title h1 mb-1">FREE</h2>
+                                    <p class="plan-commitment text-white mb-0">No-commitment</p>
+                                </div>
+                                <div class="text-end d-flex align-items-end">
+                                    <h2 class="h1 mb-1">0€/</h2>
+                                    <p class="text-white  mb-0">month</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">3 visuals per month</h5>
+                                        <p class="plan-item-description mb-0">Create up to 3 personalized visuals every
+                                            30 days for your events</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">25 backgrounds</h5>
+                                        <p class="plan-item-description mb-0">Access a selection of 25 backgrounds to
+                                            enhance your visuals</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">5 font choices</h5>
+                                        <p class="plan-item-description mb-0">Customize the text of your visuals with 5
+                                            distinct font choices</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button (click)="submit(PLANS.FREE)"
+                                class="buy-plan-btn btn btn-outline-light btn-lg w-100 mt-4">
+                                Try Allsports Free
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card plan-card text-white" >
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h2 class="card-title h1 mb-1">Basic</h2>
+                                    <p class="plan-commitment text-white mb-0">No-commitment</p>
+                                </div>
+                                <div class="text-end d-flex align-items-end">
+                                    <h2 class="h1 mb-1">70€/</h2>
+                                    <p class="text-white  mb-0">month</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Unlimited Visuals</h5>
+                                        <p class="plan-item-description mb-0">Create as many custom visuals as you want,
+                                            without restrictions</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Complete catalog of backgrounds</h5>
+                                        <p class="plan-item-description mb-0">Access an unlimited selection of
+                                            backgrounds to enhance your visuals</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Large selection of fonts</h5>
+                                        <p class="plan-item-description mb-0">Benefit from a rich selection of fonts to
+                                            make each visual unique</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button (click)="submit(PLANS.BASIC)"
+                                class="buy-plan-btn btn btn-outline-light btn-lg w-100 mt-4">
+                                Try Allsports Basic
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card plan-card text-white" >
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h2 class="card-title bronze-text h1 mb-1">Pro</h2>
+                                    <p class="plan-commitment bronze-text mb-0">With commitment</p>
+                                </div>
+                                <div class="text-end d-flex align-items-end">
+                                    <h2 class="h1 mb-1">60€/</h2>
+                                    <p class="text-white  mb-0">month</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Unlimited Visuals</h5>
+                                        <p class="plan-item-description mb-0">Create as many custom visuals as you want,
+                                            without restrictions</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Complete catalog of backgrounds</h5>
+                                        <p class="plan-item-description mb-0">Access an unlimited selection of
+                                            backgrounds to enhance your visuals</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Large selection of fonts</h5>
+                                        <p class="plan-item-description mb-0">Benefit from a rich selection of fonts to
+                                            make each visual unique</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bronze-tier d-flex justify-content-center align-items-center">
+                                -15% than Basic
+                            </div>
+
+
+                            <button (click)="submit(PLANS.PRO)"
+                                class="buy-plan-btn btn btn-outline-light btn-lg w-100 " style="margin-top: 50px;">
+                                Try Allsports <span class="bronze-text">Pro</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="card plan-card text-white" >
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h2 class="card-title gold-text h1 mb-1">Business</h2>
+                                    <p class="plan-commitment gold-text mb-0">Best plan</p>
+                                </div>
+                                <div class="text-end d-flex align-items-end">
+                                    <h2 class="h1 mb-1">598€/</h2>
+                                    <p class="text-white  mb-0">month</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Unlimited Visuals</h5>
+                                        <p class="plan-item-description mb-0">Create as many custom visuals as you want,
+                                            without restrictions</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Complete catalog of backgrounds</h5>
+                                        <p class="plan-item-description mb-0">Access an unlimited selection of
+                                            backgrounds to enhance your visuals</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fa-sharp fa-solid fa-check plan-check-icon"></i>
+                                    <div>
+                                        <h5 class="mb-1 plan-item-title">Large selection of fonts</h5>
+                                        <p class="plan-item-description mb-0">Benefit from a rich selection of fonts to
+                                            make each visual unique</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gold-tier d-flex justify-content-center align-items-center">
+                                -30% than Basic
+                            </div>
+
+
+                            <button (click)="submit(PLANS.BUSINESS)"
+                                class="buy-plan-btn btn btn-outline-light btn-lg w-100 " style="margin-top: 50px;">
+                                Try Allsports <span class="gold-text">Business</span>
+                            </button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+</ion-content>

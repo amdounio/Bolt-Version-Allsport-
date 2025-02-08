@@ -1,0 +1,157 @@
+.logo-section {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #242424;
+    overflow: hidden;
+
+    input {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    background-color: #151515;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    bottom: 32px;
+    left: 105px;
+    color: white;
+}
+
+.company-name {
+    font-family: Inter;
+    font-size: 39px;
+    font-weight: 500;
+    line-height: 54.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+
+}
+
+.user-name {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #828282;
+
+}
+
+.subscription-tag {
+    width: 100%;
+}
+
+.plan {
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    /* 16.8px */
+}
+
+.sports-section {
+    border-radius: 11px;
+    border: 0.3px solid #2D2D2D;
+    background: radial-gradient(80.35% 59.32% at 50% 0%, #1A1A1A 0%, #0D0D0D 100%);
+    box-shadow: 0px 2px 3px 0px rgba(11, 11, 11, 0.39) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+
+    .label {
+        color: #FFF;
+        font-family: 'Inter';
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    .data-text {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        /* 16.8px */
+    }
+
+}
+
+.logout-btn {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 18px */
+    border-radius: 30px;
+    border: 1px solid #8F8F8F;
+    background: rgba(255, 255, 255, 0.00);
+
+    /* Button Shadow */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    width: 343px;
+    height: 38px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.submit-btn {
+    padding: 12px 12px 12px 12px;
+    border-radius: 15px;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    gap: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+.form-control {
+    padding: 16px 16px 16px 16px;
+    border-radius: 10px;
+    border: unset;
+    border-right: none;
+    color: white;
+    background-color: #080808;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16.8px;
+    text-align: left;
+
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.644);
+}

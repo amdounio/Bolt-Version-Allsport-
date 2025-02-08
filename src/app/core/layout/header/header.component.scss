@@ -1,0 +1,128 @@
+header {
+    position: unset;
+    padding-left: 64px;
+    padding-right: 64px;
+    z-index: 9999;
+    width: 100%;
+    background-color:#0F0F0F; /* Transparent background initially */
+    backdrop-filter: blur(10px); /* Glassy effect */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    border-bottom: solid 1px rgba(255, 255, 255, 0.034) ;
+}
+
+header.scrolled {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0); /* Less transparent when scrolled */
+    backdrop-filter: blur(10px); /* Glassy effect */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    border-color: rgba(255, 255, 255, 0.548) !important;
+}
+
+.logo-image {
+    width: 106px;
+}
+
+.nav {
+    gap: 30px;
+}
+
+.nav-link {
+    font-family: "tahoma";
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 21px;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+}
+
+.nav-btn {
+    padding: 14px 24px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: 210px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-btn{
+    width: 40px;
+    display: none;
+}
+.burger-btn:hover{
+    cursor: pointer;
+}
+
+// .mobile-menu{
+//     height: 100%;
+//     background-color: black;
+//     position: absolute;
+//     z-index: 1;
+//     /* left: 62px; */
+//     width: 100%;
+//     padding: 16px 15px;
+//     transition: all 1s ease-in-out;
+
+// }
+
+
+.mobile-menu {
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 16px 15px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%); /* Move off-screen to the right */
+    visibility: hidden; /* Initially hidden */
+    .nav-items{
+        height: 25%;
+        gap: 20px !important;
+        a{
+            font-size: 20px;
+        }
+    }
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    transform: translateX(0); /* Slide in from the right */
+    visibility: visible;
+    z-index: 99999;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    header {
+        position: fixed;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .burger-btn{
+        display: block;
+    }
+    
+   .nav, .header-btns{
+    display: none !important;
+   }
+
+   .logo-image{
+    width: 80px;
+   }
+  }

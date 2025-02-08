@@ -1,0 +1,19 @@
+.header-action-button{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+}
+
+.no-items-found {
+  display: flex;
+  justify-content: center;
+  margin: 70px;
+}
+td {
+  align-content: center;
+}

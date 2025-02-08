@@ -1,0 +1,23 @@
+.custom-slider {
+
+    .carousel-item-active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-indicators {
+        position: unset !important;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-right: 15%;
+        margin-bottom: 9px;
+        margin-left: 15%;
+    }
+
+    .slider-image{
+        width: 560px;
+    }
+}

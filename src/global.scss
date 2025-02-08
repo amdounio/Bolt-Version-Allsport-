@@ -1,0 +1,87 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+
+
+:root {
+    --ion-safe-area-top: 65px; 
+    --ion-safe-area-bottom: 25px;
+}
+
+ion-content {
+    padding-top: var(--ion-safe-area-top) !important;
+    padding-bottom: var(--ion-safe-area-bottom) !important;
+}
+
+.heading {
+    padding-top: var(--ion-safe-area-top) !important;
+    box-sizing: border-box;
+}
+
+ion-footer {
+    padding-bottom: var(--ion-safe-area-bottom) !important;
+    box-sizing: border-box;
+}
+
+
+
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+@import "@ionic/angular/css/palettes/dark.always.css";
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('assets/fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'ngx-toastr/toastr-bs5-alert';
+
+html, body, ion-app, ion-content {
+    background-color: #000; /* Set the background color to black */
+  }
+body {
+    padding-top: var(--ion-safe-area-top) !important;
+    padding-bottom: var(--ion-safe-area-bottom) !important;
+    background-color: #000; /* Set the background color to black */
+}
+
+
+.md.tab-layout-icon-top{
+    background-color:var(--ion-background-color, #fff);
+}
+
+.md.hydrated{
+    background-color:var(--ion-background-color, #fff);
+    border-top:0px;
+}

@@ -1,0 +1,72 @@
+@keyframes popup {
+    0% {
+        transform: translate(-50%, 100%) scale(0.5);
+    }
+
+    50% {
+        transform: translate(-50%, -10%) scale(1.1);
+    }
+
+    70% {
+        transform: translate(-50%, 0%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, 0%) scale(1);
+    }
+}
+
+@keyframes popout {
+    0% {
+        transform: translate(-50%, 0%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 100%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.notification {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    animation: popup 0.5s, popout 0.5s 2.5s;
+    width: 80%;
+    /* Add pop-up and fade-out animation */
+}
+
+.popup { animation: popup 0.5s forwards; }
+ .popout { animation: popout 0.5s forwards; }
+
+.success{
+    background-color: rgb(2, 168, 2);
+}
+
+.error{
+    background-color: rgb(226, 0, 0);
+}
+
+.warning{
+    background-color: rgb(226, 120, 0);
+}
+
+.info{
+    background-color: rgb(63, 63, 63);
+}

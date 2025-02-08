@@ -1,0 +1,48 @@
+<ion-content>
+    <app-heading [title]="leagueName" [subTitle]="subTitle" [isDisabled]="selectedMatch.length === 0" [textLeft]="true" [nextButon]="'/dashboard/generated-media'"></app-heading>
+<div class="container">
+    <div class="section-body mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <a  class="slider-control" (click)="previous()"><i class="fa-solid fa-chevron-left"></i></a>
+            <p class="date">{{startDateString}}</p>
+            <a  class="slider-control" (click)="next()"><i class="fa-solid fa-chevron-right"></i></a>
+
+        </div>
+        <div *ngIf="firstDayMatchs.length !== 0" class="d-flex matchs-items flex-wrap mt-5 gap-4">
+            @for (item of firstDayMatchs; track $index) {
+                <label class="btn match-btn d-flex align-items-center justify-content-between p-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <input type="checkbox" class="checkbox" (change)="selectMatch(item)">
+                        <div class="d-flex flex-column gap-2">
+                            <span class="team-name">{{item.firstTeam.name}}</span>
+                            <span class="team-name">{{item.secondTeam.name}}</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="match-date">{{item?.periods?.first * 1000| date:'HH:mm'}} - {{item?.periods?.second * 1000 | date:'HH:mm'}}</span>
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <img class="team-icon" ngOptimizedImage [src]="item.firstTeam.logo" [alt]="item.firstTeam.name">
+                            <img class="team-icon" ngOptimizedImage [src]="item.secondTeam.logo" [alt]="item.secondTeam.name">
+                        </div>
+                    </div>
+                </label>
+            }
+            
+            
+        </div>
+
+        <div class="empty-message d-flex align-items-center justify-content-center" *ngIf="firstDayMatchs.length === 0 && startLoading=== false">
+            <p class="empty-text">Il n'y a pas de match à diffuser.</p>
+        </div>
+
+        <div *ngIf="startLoading" class="empty-message d-flex align-items-center justify-content-center">
+            <div class="spinner-grow" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+
+</ion-content>

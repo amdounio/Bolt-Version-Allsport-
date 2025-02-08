@@ -1,0 +1,9 @@
+<div class="heading d-flex align-items-center justify-content-between">
+  <img src="assets/images/logo.png" class="logo" alt="">
+  <div class="d-felx flex-column" [ngClass]="{'align-items-end' : !textLeft}">
+    <h3 class="title m-0" [ngClass]="{'text-end' : !textLeft}">{{ title }}</h3>
+    <p class="sub-title m-0 " [ngClass]="{'text-end' : !textLeft}">{{ subTitle }}</p>
+    
+  </div>
+  <button *ngIf="nextButon" [disabled]="isDisabled" [routerLink]="nextButon" class="btn next-btn" >Next</button>
+</div>

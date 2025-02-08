@@ -1,0 +1,183 @@
+.sports-section {
+    background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
+    border-radius: 30px;
+
+    .section-head {
+        cursor: pointer;
+        .title {
+            font-family: 'Blair ITC';
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20.8px;
+            text-align: left;
+            color: white;
+        }
+
+        .sub-title {
+            font-family: 'Blair ITC';
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 13.52px;
+            text-align: left;
+            color: white;
+        }
+    }
+
+    .section-body {
+        .sport-item {
+            min-height: 160px;
+            padding: 15px;
+            border-radius: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+
+
+            .title {
+                font-family: 'Blair ITC';
+                font-size: 25px;
+                font-weight: 300;
+                line-height: 22px;
+                text-align: left;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .sub-title {
+                font-family: Inter;
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 9.8px;
+                text-align: left;
+                color: white;
+                width: 70%;
+            }
+
+
+            .sport-item-btn {
+                padding: 10px 10px 10px 10px;
+                border-radius: 30px;
+                background-color: white;
+                font-family: Inter;
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 9.8px;
+                color: black;
+                display: none;
+            }
+        }
+
+        .sport-item:hover {
+            .sport-item-btn {
+                display: block;
+            }
+        }
+
+        .championship-item {
+            min-height: 220px;
+            padding: 15px;
+            border-radius: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+
+
+            .title {
+                font-family: 'Blair ITC';
+                font-size: 19px;
+                font-weight: 350;
+                line-height: 14.63px;
+                text-align: right;
+                text-transform: uppercase;
+                color: white;
+            }
+
+            .sub-title {
+                font-family: Inter;
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 9.8px;
+                text-align: left;
+                color: white;
+                width: 70%;
+            }
+
+
+            .sport-item-btn {
+                padding: 10px 10px 10px 10px;
+                border-radius: 30px;
+                background-color: white;
+                font-family: Inter;
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 9.8px;
+                color: black;
+                display: none;
+            }
+        }
+
+        .championship-item:hover {
+            .sport-item-btn {
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+.section-body {
+    .sport-item {
+        min-height: 160px;
+        padding: 15px;
+        border-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+
+
+        .title {
+            font-family: 'Blair ITC';
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 22px;
+            text-align: left;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .sub-title {
+            font-family: Inter;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 9.8px;
+            text-align: left;
+            color: white;
+            width: 70%;
+        }
+
+
+        .sport-item-btn {
+            padding: 10px 10px 10px 10px;
+            border-radius: 30px;
+            background-color: white;
+            font-family: Inter;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 9.8px;
+            color: black;
+            display: none;
+        }
+    }
+
+    .sport-item:hover {
+        .sport-item-btn {
+            display: block;
+        }
+    }
+
+   
+}

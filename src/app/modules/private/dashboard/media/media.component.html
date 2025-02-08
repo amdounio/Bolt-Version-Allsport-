@@ -1,0 +1,52 @@
+<ion-content>
+    <app-heading [title]="title" [subTitle]="subTitle"></app-heading>
+
+    <div class="container mb-4">
+        <div *ngFor="let item of mediaList; let i = index" class="media-list p-2 mt-3">
+            <div class="row">
+                <div class="col-3 d-flex flex-column align-items-start justify-content-left p-0">
+                    <p class="date m-0">{{ formtDate(item.Date).dayWeek }} <br><span>{{ formtDate(item.Date).day }}</span></p>
+                    <span class="date-month">{{ formtDate(item.Date).month }}</span>
+                </div>
+                <div class="col-9 d-flex flex-column align-items-center justify-content-center gap-2" style="padding-left: 0px;">
+                    <div *ngFor="let media of item.data; let j = index">
+                        <div *ngFor="let files of media?.data; let k = index" class="media d-flex align-items-center justify-content-between w-100">
+                            <div class="infos-section d-flex align-items-center justify-content-left gap-1 p-1">
+                                <div class="btn-section d-flex align-items-center gap-2">
+                                    <button class="btn download-btn" (click)="download(files?.story, files?.match)">
+                                        <i class="fa-solid fa-download"></i>
+                                        Story
+                                    </button>
+                                    <button class="btn download-btn" (click)="download(files?.square, files?.match)">
+                                        <i class="fa-solid fa-download"></i>
+                                        Carré
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-column align-items-start gap-1">
+                                    <p class="teams m-0">
+                                        {{ files?.match?.firstTeam?.name }}<br>{{ files?.match?.secondTeam?.name }}
+                                    </p>
+                                    <span *ngIf="files?.match?.status?.long === 'Match Finished'" class="time m-0">
+                                        {{ (files?.match?.periods?.first * 1000) | date:'HH:mm' }} -
+                                        {{ (files?.match?.periods?.second * 1000) | date:'HH:mm' }}
+                                    </span>
+                                    <span *ngIf="files?.match?.status?.long !== 'Match Finished'" class="time m-0">
+                                        {{ files?.match?.startDate | date:'HH:mm' }} -
+                                        {{ files?.match?.endDate | date:'HH:mm' }}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="team-images d-flex gap-3 align-items-center justify-content-center">
+                                <img [src]="files?.match?.firstTeam?.logo" alt="" class="team-image">
+                                <img [src]="files?.match?.secondTeam?.logo" alt="" class="team-image">
+                            </div>
+                            <button class="btn trash-btn" (click)="delete(files?.match?.id, media?.user_id, media?.id)">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

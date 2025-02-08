@@ -1,0 +1,247 @@
+// ===============================================
+
+
+.login-section {
+    background-color: #000000;
+    padding-bottom: 100px;
+
+    .custom-container {
+        width: 90%;
+    }
+
+    .login-card {
+        // background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
+        // padding: 32px 32px 32px 32px;
+        gap: 48px;
+        border-radius: 30px;
+        border: 0.3px;
+
+        .logo {
+            width: 89px;
+        }
+
+        .title-card {
+            font-family: 'Blair ITC';
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: left;
+            color: white;
+            text-transform: uppercase;
+
+        }
+
+        .description-card {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 19.6px;
+            text-align: left;
+            color: white;
+
+
+        }
+
+        .plan-card {
+            width: 23%;
+            background: radial-gradient(59.32% 80.35% at 50% 0%, #1A1A1A 0%, #0D0D0D 100%);
+            border: 0.3px solid #2D2D2D;
+            color: white;
+            padding: 10px 10px;
+            gap: 40px;
+            box-shadow: 0px 4px 4px 0px #00000040;
+
+            box-shadow: 0px 2px 3px 0px #0B0B0B63 inset;
+            border-radius: 11px;
+
+
+            .plan-name {
+                background: radial-gradient(59.32% 80.35% at 50% 0%, #1A1A1A 0%, #0D0D0D 100%);
+                border: 0.6px solid #2D2D2D;
+                padding: 5px 5px;
+                width: 100px;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 28px;
+                text-align: center;
+                border-radius: 15px;
+            }
+
+            .plan-check-icon {
+                font-size: 20px;
+                margin-right: 25px;
+            }
+
+            .plan-item-title {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 21px;
+                text-align: left;
+
+            }
+
+            .plan-item-description {
+                font-family: Inter;
+                font-size: 8px;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: left;
+            }
+
+            .cost-text {
+                font-family: Inter;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 23.5px;
+                text-align: center;
+
+                span {
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 10px;
+                }
+
+                .billing-type {
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-weight: 300;
+                    line-height: 14px;
+                    text-align: center;
+
+                }
+            }
+
+            .plan-commitment{
+                font-family: Inter;
+                    font-size: 10px;
+                    font-weight: 300;
+                    line-height: 14px;
+                    text-align: center;
+            }
+
+            .buy-plan-btn {
+                border: 0.6px solid #2D2D2D;
+                background: radial-gradient(59.32% 80.35% at 50% 0%, #1A1A1A 0%, #0D0D0D 100%);
+                font-family: Inter;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 19.6px;
+                text-align: center;
+                color: #D9D9D9;
+                width: 180px;
+                padding: 7px;
+                border-radius: 15px;
+
+            }
+
+        }
+
+
+        .back-btn {
+            color: white;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16.8px;
+            text-align: left;
+            text-decoration: none;
+            -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        
+        .next-btn {
+            padding: 5px 5px 5px 5px;
+            border-radius: 15px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22.4px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            gap: 10px;
+            width: 100px;
+            background-color: white;
+        }
+
+
+
+
+    }
+}
+
+
+
+
+.carousel-inner {
+    border-radius: 30px !important;
+}
+
+.bronze-text{
+    color: #BA784C !important;
+}
+
+.bronze-tier{
+    background: linear-gradient(180deg, #BA784C 0%, #492812 100%);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: center;
+    color: white;
+    height: 29px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    
+}
+.gold-text{
+    color: #F9E785 !important;
+}
+
+.gold-tier{
+    background: linear-gradient(180deg, #F9E785 0%, #A87A20 100%);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: center;
+    color: black;
+    height: 29px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    
+}
+
+
+.gold-tier-gradient{
+    color: #0B0B0B !important;
+    background: linear-gradient(180deg, #F9E785 0%, #A87A20 100%) !important;
+}
+
+
+@media screen and (max-width: 1200px){
+    .custom-container{
+        width: 90%;
+    }
+    .cards-layout{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .plan-card{
+        width: 100% !important;
+
+    }
+}

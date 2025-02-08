@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="login-section p-0">
+        <app-heading [title]="title" [subTitle]="subTitle"></app-heading>
+    </div>
+<section class="login-section">
+    <div class="container">
+        <div class="login-card d-flex flex-column">
+            <a routerLink="/register/subscription-needs" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+            <div class="row justify-content-center align-items-start ">
+                <div class="d-flex flex-column align-items-center justify-content-center gap-4">
+
+                    <div *ngIf="!sportClicked" class="d-flex align-items-center justify-content-center flex-wrap gap-4 w-100">
+                        <button *ngFor="let sport of sportsButtons" class="btn sports-btn" (click)="sportClicked = true"
+                            [disabled]="sport?.disabled">{{sport?.name}}</button>
+                        
+
+                    </div>
+                    
+                    <div *ngIf="sportClicked" class="d-flex align-items-center justify-content-center flex-wrap gap-4 w-100">
+                        <button *ngFor="let sport of leaguesButtons" class="btn sports-btn" [ngClass]="{'selected': isSelected(sport)}" (click)="selectLeagues(sport)" [disabled]="sport?.disabled">{{sport?.name}}</button>
+                    </div>
+                    
+
+                    <div class="d-flex align-items-center justify-content-center gap-4 w-100 mt-5">
+                        <button class="btn next-btn" (click)="submit()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</ion-content>

@@ -1,0 +1,11 @@
+<ngb-carousel [showNavigationIndicators]="true" class="custom-slider">
+    @for (item of graphicsList; track $index) {
+        <ng-template ngbSlide>
+            <img [src]="item.view" class="slider-image" alt="Team 1">
+        </ng-template>
+    }
+</ngb-carousel>
+
+<style>
+
+</style>

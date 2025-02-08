@@ -1,0 +1,53 @@
+.sport-card {
+    height: 170px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    .card-content {
+        width: 38%;
+    }
+
+    .card-title {
+        font-family: "Blair ITC";
+        font-size: 23px;
+        font-weight: 350;
+        line-height: 21px;
+        text-align: left;
+        color: white;
+
+    }
+
+    .card-description {
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 22.4px;
+        text-align: left;
+        color: white;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .card-btn {
+        padding: 3px 8px;
+        border-radius: 30px;
+        background-color: white;
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 22.5px;
+        color: black;
+        width: 90%;
+
+    }
+
+
+}
+
+.disabled-card {
+    filter: grayscale(1);
+}
+

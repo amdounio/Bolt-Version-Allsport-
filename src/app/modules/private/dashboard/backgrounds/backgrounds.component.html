@@ -1,0 +1,57 @@
+<div class="bg-dark modal-section">
+        <div class="modal-header">
+            <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex align-items-center justify-content-left gap-3 modal-headers">
+                <div ngbDropdown class="d-inline-block">
+                    <button type="button" class="btn secondary-btn" id="dropdownForm1" ngbDropdownToggle>
+                        {{filterDropDownLabel}}
+                    </button>
+                    <div ngbDropdownMenu class="filter-menu" aria-labelledby="dropdownForm1">
+                        <ul class="filter-list">
+                            <li *ngFor="let item of backgoundCategorieList; let track = index">
+                                <label
+                                    class="btn match-btn d-flex align-items-center justify-content-between p-3">
+                                    <div class="d-flex align-items-center justify-content-between gap-3">
+                                        <div class="d-flex flex-column gap-2">
+                                            <span class="team-name">{{item?.name}}</span>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" class="checkbox" (change)="filterBackground(item)">
+
+                                </label>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn next-btn" (click)="close()">Next</button>
+            </div>
+            
+            <div class="section-body d-flex align-items-center justify-content-center flex-wrap gap-4 mt-5">
+                <label *ngFor="let item of backgroundList; let track = index" ngOptimizedImage class="btn background-btn d-flex align-items-start justify-content-end "  [ngClass]="{'p-3': !disableBackground(item), 'p-0': disableBackground(item)}"
+                  [ngStyle]="{'background': 'url(' + item.image + ')', 'background-size':'cover'}">
+                  
+                  <input type="checkbox" class="checkbox" [disabled]="disableBackground(item)" *ngIf="!disableBackground(item)" [checked]="isBackgroundSelected(item)" (change)="seclectBackground(item)">
+                  
+                  <div *ngIf="disableBackground(item)" class="premium d-flex align-items-center justify-content-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                      <i class="fa-solid fa-lock text-white"></i>
+                      <div class="premium-card d-flex align-items-center justify-content-between p-2 gap-2 mt-2">
+                        <img src="assets/images/logo.png" alt="all sports">
+                        <p class="m-0">Upgrade to Premium plan and unlock all backgrounds</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </label>
+              </div>
+              
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+        </div> -->
+
+
+</div>

@@ -1,0 +1,19 @@
+{
+  "name": "my-image-gallery-saver",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "types": "index.d.ts",
+  "private": true,
+  "scripts": {
+    "prepare": "ionic cap sync"
+  },
+  "dependencies": {
+    "@capacitor/core": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

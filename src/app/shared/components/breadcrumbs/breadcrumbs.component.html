@@ -1,0 +1,10 @@
+<div class="pagetitle">
+  <h1>{{title}}</h1>
+  <nav>
+    <ol class="breadcrumb">
+      @for ( breadcrumb of (breadcrumbs$ | async) ; track breadcrumb){
+        <li class="breadcrumb-item" [routerLink]="breadcrumb.url" [ngClass]="breadcrumb.current ? 'active' : ''">{{ breadcrumb.label }}</li>
+      }
+    </ol>
+  </nav>
+</div>

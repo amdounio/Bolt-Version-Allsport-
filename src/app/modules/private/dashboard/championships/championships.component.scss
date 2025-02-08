@@ -1,0 +1,56 @@
+.championship-item {
+    height: 180px;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+
+    .title {
+        font-family: 'Blair ITC';
+        font-size: 12px;
+        font-weight: 350;
+        line-height: 14.63px;
+        text-align: right;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .sub-title {
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 9.8px;
+        text-align: left;
+        color: white;
+        width: 70%;
+    }
+
+
+    .sport-item-btn {
+        padding: 10px 10px 10px 10px;
+        border-radius: 30px;
+        background-color: white;
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 9.8px;
+        color: black;
+        display: none;
+    }
+}
+.list-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+
+}
+.championship-item:hover {
+    .sport-item-btn {
+        display: block;
+    }
+}

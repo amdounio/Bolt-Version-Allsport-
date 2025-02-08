@@ -1,0 +1,23 @@
+<ion-content>
+    <app-heading [title]="title" [subTitle]="subTitle"></app-heading>
+    <div class="container">
+            <div class="section-body d-flex justify-content-center mb-4 w-100">
+                <div class="row gap-3 w-100">
+                    @for (item of sportsList; track $index) {
+                    <div class="col-lg-3 col-md-6 col-sm-12 sport-item d-flex align-items-end justify-content-between"
+                        (click)="selectSport(item)" ngOptimizedImage
+                        [ngStyle]="{'background': 'linear-gradient(270deg,'+ item.firstColorGradientOverlay +' 25.07%,'+ item.secondColorGradientOverlay +' 58.79%),url(' + item.image + ')', 'background-size':'cover'}">
+                        <div class="d-flex flex-column">
+                            <h3 class="title m-0">{{item.title}}</h3>
+                            <p class="sub-title m-0">{{item.subTitle}}</p>
+                        </div>
+                        <button class="btn sport-item-btn" [ngClass]="{'bg-dark text-white':item.disabled=== true}">Crée tes visuels</button>
+                    </div>
+                    }
+                </div>
+            </div>
+
+    </div>
+
+
+</ion-content>

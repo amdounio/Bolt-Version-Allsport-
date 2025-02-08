@@ -1,0 +1,23 @@
+.sso-btn {
+    border: 1px solid #ffffff;
+    padding: 16px 32px 16px 32px;
+    border-radius: 15px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    gap: 10px;
+    width: 178px;
+
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}

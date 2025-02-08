@@ -1,0 +1,52 @@
+.heading {
+    height: 80px;
+    padding: 21px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color:var(--ion-background-color, #fff);
+    padding-top: var( --ion-safe-area-top) !important;
+    .logo{
+        width: 65px;
+    }
+   
+
+    .title {
+        font-family: 'Blair ITC';
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20.8px;
+        text-align: left;
+        color: white;
+    }
+
+    .sub-title {
+        font-family: 'Blair ITC';
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 13.52px;
+        text-align: left;
+        color: white;
+    }
+}
+
+.next-btn {
+    padding: 0px 0px 0px 0px;
+    border-radius: 15px;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0 0 0);
+    text-decoration: none;
+    gap: 10px;
+    width: 60px;
+    background-color: #ffffff;
+    opacity: 1;
+}

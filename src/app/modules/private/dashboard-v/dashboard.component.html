@@ -1,0 +1,41 @@
+<!-- <section class="section bg-dark">
+    <div class="row">
+        <div class="col-2 p-0 overflow-hidden">
+            <app-side-menu></app-side-menu>
+        </div>
+        <div class="col-10 p-0 overflow-hidden">
+             <app-home></app-home>
+        </div>
+    </div>
+</section> -->
+
+
+<div class="container-fluid bg-dark">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-12 col-md-2 d-md-block d-none p-0">
+        <!-- <app-side-menu></app-side-menu> -->
+      </div>
+  
+      <!-- Toggle Button for Sidebar on small screens -->
+      <div class="col-12 d-md-none p-2 bg-light">
+        <button class="btn btn-primary" (click)="toggleSidebar()">
+          Toggle Sidebar
+        </button>
+      </div>
+  
+      <!-- Sidebar for small screens (offcanvas behavior) -->
+      <div [ngClass]="{'d-block': showSidebar, 'd-none': !showSidebar}" class="col-12 col-md-3 d-md-none p-0">
+        <!-- <app-side-menu></app-side-menu> -->
+      </div>
+  
+      <!-- Content area -->
+      <div class="col p-2">
+        <div class="content-area">
+          <router-outlet name="dashboardOutlet"></router-outlet>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  

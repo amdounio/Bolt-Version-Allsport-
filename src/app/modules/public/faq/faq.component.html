@@ -1,0 +1,25 @@
+<section class=" hero-section flex-column d-lg-flex ">
+    <div class="container">
+    <h1 class="hero-title">Questions fréquentes</h1>
+    <div class="features-card mt-5">
+        <div ngbAccordion [closeOthers]="true" class="accordion-items">
+            @for (item of items; track item) {
+                <div ngbAccordionItem >
+                    <h2 ngbAccordionHeader>
+                        <button class="ngb-accordion-title" ngbAccordionButton>{{ item.title }}</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                {{item.description}}
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+    </div>
+</div>
+</section>

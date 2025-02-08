@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Blair ITC';
+    src: url('BlairITC-Light.eot');
+    src: local('Blair ITC Light'), local('BlairITC-Light'),
+        url('BlairITC-Light.eot?#iefix') format('embedded-opentype'),
+        url('BlairITC-Light.woff2') format('woff2'),
+        url('BlairITC-Light.woff') format('woff'),
+        url('BlairITC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blair ITC';
+    src: url('BlairITC-Medium.eot');
+    src: local('Blair ITC Medium'), local('BlairITC-Medium'),
+        url('BlairITC-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BlairITC-Medium.woff2') format('woff2'),
+        url('BlairITC-Medium.woff') format('woff'),
+        url('BlairITC-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blair ITC';
+    src: url('BlairITC-Bold.eot');
+    src: local('Blair ITC Bold'), local('BlairITC-Bold'),
+        url('BlairITC-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BlairITC-Bold.woff2') format('woff2'),
+        url('BlairITC-Bold.woff') format('woff'),
+        url('BlairITC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

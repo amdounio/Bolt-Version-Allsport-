@@ -1,0 +1,52 @@
+<div class="side-menu d-flex flex-column">
+    <img ngOptimizedImage src="assets/images/logo.png" class="logo" alt="">
+    <ul class="nav flex-column gap-4">
+        <li class="nav-item">
+            <a class="nav-link d-flex  align-items-center gap-3" routerLink="/dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H12H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 22V12H15V22" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>Accueil</span>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link d-flex  align-items-center gap-3" routerLink="/dashboard/sports">
+                <i class="fa-regular fa-square-plus icon-side-menu"></i>
+                <span>Créer</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link d-flex  align-items-center gap-3" routerLink="/dashboard/media">
+                <i class="fa-regular fa-image icon-side-menu"></i>
+                <span>Mediathèque</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link d-flex  align-items-center gap-3" routerLink="/dashboard/profil">
+                <i class="fa-regular fa-circle-user icon-side-menu"></i>
+                <span>Profil</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link d-flex  align-items-center gap-3" routerLink="/dashboard/help">
+                <i class="fa-regular fa-circle-question icon-side-menu"></i>
+                <span>Help</span>
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="subscription-card">
+        <p class="number-images-generated">Visual generated : 3/3</p>
+        <p class="upgrade-plan-link">Upgrade to Premium plan and unlock all features</p>
+        <button class="btn upgrade-btn" routerLink="/register-step-three">Upgrade to Premium</button>
+        
+    </div>
+    
+    <button class="btn logout-btn" (click)="logout()">Se déconnecter</button>
+</div>

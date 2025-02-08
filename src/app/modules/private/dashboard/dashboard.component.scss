@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .content-area {
+    margin-left: 0; /* No margin when sidebar is hidden */
+  }
+
+  .sidebar {
+    position: absolute;
+    z-index: 1030; /* Ensure the sidebar appears above the content */
+  }
+}
+
+/* General content area padding */
+.content-area {
+  padding: 20px;
+}
