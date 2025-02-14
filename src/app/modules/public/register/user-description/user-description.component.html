@@ -5,66 +5,67 @@
     <section class="login-section">
         <div class="container">
             <div class="login-card d-flex flex-column">
-                <a routerLink="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                <a routerLink="/register" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </a>
 
                 <form [formGroup]="form">
                     <div class="d-flex flex-column align-items-center justify-content-center gap-4">
                         <div class="d-flex justify-content-between align-items-center w-100">
-                            <div class="d-flex flex-column justify-content-center  align-items-left">
-                                <p class="m-0 text-white ">Your business logo* :
-                                    {{this.selectedFile?.name ? this.selectedFile?.name : ''}}</p>
-                                <p class="file-recomendation m-0">Select a PNG file,<br>recommended size
-                                    1000px*1000px
-                                </p>
+                            <div class="d-flex flex-column justify-content-center align-items-left">
+                                <p class="m-0 text-white">Your business logo* :</p>
+                                <p class="file-recomendation m-0">Select a PNG file,<br>recommended size 1000px*1000px</p>
                             </div>
-                            <input type="file" name="logo-file" id="logo_file" (change)="onFileSelected($event)"
-                                hidden>
-                            <label for="logo_file" class="btn logo-upload-btn">upload</label>
-
-
+                            <div class="logo-preview-container">
+                                <div class="logo-preview-wrapper">
+                                    <img *ngIf="previewUrl" [src]="previewUrl" alt="Logo preview" class="logo-preview">
+                                </div>
+                                <input type="file" name="logo-file" id="logo_file" (change)="onFileSelected($event)" accept="image/*" hidden>
+                                <label for="logo_file" class="btn logo-upload-btn">
+                                    {{ selectedFile ? 'Change' : 'Upload' }}
+                                </label>
+                            </div>
                         </div>
 
-                        <div
-                            class="d-flex flex-column align-items-center justify-content-center gap-4 w-100 mt-4">
-                            <!-- <div class="d-flex align-items-center justify-content-center gap-4">
-                        <hr class="divider-line m-0  w-100">
-                        <p class="divider-text m-0">or</p>
-                        <hr class="divider-line m-0">
-                    </div> -->
+                        <div class="d-flex flex-column align-items-center justify-content-center gap-4 w-100 mt-4">
                             <div class="row g-3 w-100">
                                 <div class="col-md-6 p-0">
-                                    <input type="text" placeholder="Business name"
-                                        formControlName="businessName" class="form-control" id="businessName">
+                                    <input type="text" placeholder="Business name" formControlName="businessName" class="form-control" id="businessName">
                                 </div>
                                 <div class="col-md-6 p-0">
-                                    <select name="buisnessType" formControlName="buisnessType"
-                                        aria-placeholder="Sélectionner" class="form-control select-box"
-                                        id="buisnessType">
+                                    <select name="buisnessType" formControlName="buisnessType" aria-placeholder="Select" class="form-control select-box" id="buisnessType">
                                         <option value="">Select type of business</option>
-                                        <option value="V1">v1</option>
-                                        <option value="V2">v1</option>
-                                        <option value="V3">v1</option>
-                                        <option value="V5">v1</option>
+                                        <option value="V1">Restaurant</option>
+                                        <option value="V2">Bar</option>
+                                        <option value="V3">Sports Club</option>
+                                        <option value="V5">Other</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row g-3 w-100 gap-2">
                                 <div class="col-md-12 p-0">
-                                    <input type="text" class="form-control" id="adress"
-                                        formControlName="adresse" placeholder="adress">
+                                    <input type="text" class="form-control" id="adress" formControlName="adresse" placeholder="Address">
                                 </div>
                             </div>
                             <div class="row g-3 w-100">
                                 <div class="col-md-6 p-0">
-                                    <input type="text" class="form-control" id="phoneNumber"
-                                        formControlName="phone" placeholder="Phone number">
-                                </div>
+                                    <input 
+                                      type="tel" 
+                                      class="form-control" 
+                                      id="phoneNumber" 
+                                      formControlName="phone" 
+                                      placeholder="Phone number" 
+                                      pattern="^\+?[1-9]\d{1,14}$" 
+                                      title="Please enter a valid phone number (e.g., +1234567890)"
+                                    >
+                                  </div>
+                                  
+                                  
+                                  
                                 <div class="col-md-6 p-0">
-                                    <input type="text" placeholder="Raison Sociale" class="form-control"
-                                        formControlName="companyName" id="raisonSociale">
+                                    <input type="text" placeholder="Company Name" class="form-control" formControlName="companyName" id="companyName">
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="d-flex align-items-center justify-content-center gap-4 w-100 mt-5">
@@ -75,5 +76,4 @@
             </div>
         </div>
     </section>
-
 </ion-content>

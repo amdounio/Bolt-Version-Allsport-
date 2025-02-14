@@ -1,175 +1,55 @@
-
-// ===============================================
-
-
 .login-section {
     background-color: #000000;
     padding-top: 50px;
 
-
     .login-card {
         background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
-        padding: 32px 10px 32px 10px;
+        padding: 32px 32px 32px 32px;
         gap: 48px;
         border-radius: 30px;
-        border: 0.3px;
+        border: 0.3px solid rgba(255, 255, 255, 0.1);
 
-        .logo {
-            width: 89px;
-        }
-
-        .title-card {
-            font-family: 'Blair ITC';
-            font-size: 30px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: left;
-            color: white;
-            text-transform: uppercase;
-
-        }
-
-        .description-card {
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 19.6px;
-            text-align: left;
-            color: white;
-
-
-        }
-
-        .sso-btn {
-            border: 1px solid #ffffff;
-            padding: 16px 32px 16px 32px;
-            border-radius: 15px;
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 19.6px;
-            text-align: left;
+        .logo-preview-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
             gap: 10px;
-            width: 100%;
-
-
-            svg {
-                width: 18px;
-                height: 18px;
-            }
         }
 
-        .divider-line {
-            background-color: #FFFFFF;
-            width: 250px;
-            color: #FFFFFF;
-            height: 1px;
-        }
-
-        .divider-text {
-
-            color: white;
-        }
-
-        .steper-page-number {
-            font-family: Inter;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 22.4px;
-            text-align: left;
-            color: white;
-        }
-
-
-
-        .form-label {
-            color: white;
-            font-family: Inter;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 16.8px;
-            text-align: left;
-
-        }
-
-        .form-control {
-            padding: 16px 16px 16px 16px;
-            border-radius: 10px;
-            border: 1px solid #ffffff;
-            color: white;
-            background-color: #0d0d0d00;
-            font-family: Inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 16.8px;
-            text-align: left;
-
-        }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.644);
-        }
-
-        
-
-        
-
-        .submit-btn {
-            padding: 12px 12px 12px 12px;
-            border-radius: 15px;
-            font-family: Inter;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 22.4px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            gap: 10px;
-            width: 100%;
-            background-color: white;
-        }
-        .logo-upload-btn {
-            padding:  8px 14px 8px 14px;
-            border-radius: 15px;
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 22.4px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            gap: 10px;
-            background-color: white;
-        }
-
-        .next-btn{
-            padding:  5px 5px 5px 5px;
-            border-radius: 15px;
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 22.4px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            gap: 10px;
+        .logo-preview-wrapper {
             width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-upload-btn {
+            padding: 8px 14px;
+            border-radius: 15px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22.4px;
+            color: rgb(0, 0, 0);
             background-color: white;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            text-align: center;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
         }
 
         .back-btn {
@@ -178,14 +58,67 @@
             font-size: 12px;
             font-weight: 500;
             line-height: 16.8px;
-            text-align: left;
             text-decoration: none;
-            -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-bottom: 20px;
+        }
 
+        .form-control {
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            background-color: rgba(13, 13, 13, 0);
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16.8px;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            &:focus {
+                border-color: rgba(255, 255, 255, 0.4);
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        .select-box {
+            background-image: url('/assets/icons/arrow.png');
+            background-position: right 16px center;
+            background-repeat: no-repeat;
+            background-size: 12px;
+            appearance: none;
+            padding-right: 40px;
+        }
+
+        .next-btn {
+            padding: 12px;
+            border-radius: 15px;
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22.4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            gap: 10px;
+            width: 100%;
+            max-width: 200px;
+            background-color: transparent;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
         }
 
         .file-recomendation {
@@ -194,56 +127,18 @@
             font-style: italic;
             font-weight: 300;
             line-height: 14px;
-            text-align: left;
-            color: #ADADAD;
+            color: rgba(255, 255, 255, 0.6);
         }
-        
-        .select-box{
-            background-image: url('/assets/icons/arrow.png');
-            background-position: right;
-            background-repeat: no-repeat;
-            background-position-x: 98%;
-            background-color: #171717;
-            
-        }
-
-        .remember-me-txt {
-            font-family: Inter;
-            font-size: 15px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 16.8px;
-            text-align: left;
-            color: #FFFFFF99;
-        }
-    
-        .picsum-img-wrapper{
-            display: flex;
-            height: 790px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px
-        }
-        .have-account-text {
-            color: white;
-            font-family: Inter;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 22.4px;
-            a{
-                color: white;
-                text-decoration: none;
-                font-weight: 700;
-            }
-        }
-
-        
     }
 }
 
-
-
-
-.carousel-inner{
-    border-radius: 30px !important;
+@media (max-width: 768px) {
+    .login-section {
+        padding-top: 20px;
+        
+        .login-card {
+            padding: 20px;
+            margin: 0 15px;
+        }
+    }
 }

@@ -5,7 +5,6 @@ import { Category } from '../../../models/category.model';
 import { CategoriesService } from '../../../services/categories.service';
 import { BackgroundService } from '../../../services/background.service';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
-import { User } from '@codetrix-studio/capacitor-google-auth';
 import { Plans } from 'src/app/core/enums/plans.enum';
 
 @Component({

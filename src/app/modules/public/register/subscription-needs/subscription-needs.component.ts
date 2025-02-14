@@ -5,6 +5,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormField } from '../../../../core/models/form-fields.model';
 import { AuthenticationService } from '../../../../core/services/authentication.service';
 import { User } from '../../../../models/user.model';
+import { NotificationService } from '../../../../shared/services/notification.service';
 
 @Component({
   selector: 'app-subscription-needs',
@@ -28,6 +29,8 @@ export class SubscriptionNeedsComponent {
   ]
   selectedFile : File
   functionsValidators: any[] = []
+      private notificationService: NotificationService
+  
   constructor(private config: NgbCarouselConfig, private service : AuthenticationService, private router : Router) {
     this.config.showNavigationArrows = false
   }
@@ -82,12 +85,12 @@ export class SubscriptionNeedsComponent {
       this.service.updateUser(data).subscribe({
         next: res=>{
           console.log(res);
-          
             localStorage.setItem('user',JSON.stringify(res.user))
             this.router.navigate(['/register/favorite-sports'])
-  
         }
       })
+    }else{
+       this.notificationService.Warning('Please fill all required fields');
     }
   }
 }

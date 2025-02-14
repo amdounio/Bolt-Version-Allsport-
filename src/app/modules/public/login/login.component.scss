@@ -1,8 +1,31 @@
+.password-field {
+    position: relative;
+
+    i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.form-check-input {
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+
+    &:checked {
+        background-color: white;
+        border-color: white;
+    }
+}
+
 .login-section {
-    background-color: #0F0F0F;
+    background-color: #000000;
     padding-top: 100px;
     padding-bottom: 100px;
-
 
     .login-card {
         background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
@@ -69,7 +92,6 @@
         }
 
         .divider-text {
-
             color: white;
         }
 
@@ -81,8 +103,6 @@
             text-align: left;
             color: white;
         }
-
-
 
         .form-label {
             color: white;
@@ -201,12 +221,45 @@
             text-decoration: none;
         }
 
+        .password-field {
+            position: relative;
 
+            i {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: white;
+            }
+        }
+
+        .form-check {
+            .form-check-input {
+                width: 15px;
+                height: 15px;
+                background-color: transparent;
+                border: 1px solid white;
+                border-radius: 3px;
+                cursor: pointer;
+
+                &:checked {
+                    background-color: white;
+                    border-color: white;
+                }
+            }
+
+            .form-check-label {
+                color: white;
+                font-size: 12px;
+                cursor: pointer;
+                margin-left: 8px;
+            }
+        }
     }
 }
 
-
-.landing-page{
+.landing-page {
     background-color: black;
     height: 100vh;
     background-image: url('/assets/images/mobile-background.png');
@@ -214,12 +267,22 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    .logo{
+    .logo {
         width: 151px;
     }
-    
-    
 
+    .password-field {
+        position: relative;
+
+        i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.644);
+        }
+    }
     
     .form-label {
         color: white;
@@ -279,7 +342,7 @@
     }
 
     .submit-btn {
-        padding: 6px 25px;
+        padding: 12px 12px 12px 12px;
         border-radius: 15px;
         font-family: Inter;
         font-size: 15px;
@@ -289,24 +352,39 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         gap: 10px;
         width: 100%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid white;
+    }
+
+    .form-check-input {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:checked {
+            background-color: white;
+            border-color: white;
+        }
     }
 
     .remember-me-txt {
+        color: white;
         font-family: Inter;
         font-size: 10px;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 16.8px;
-        text-align: left;
-        color: #ffffff;
-        a{
-            text-decoration:none !important;
-            color:white !important;
+        font-weight: 300;
+        line-height: 22.4px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
         }
     }
 
@@ -318,6 +396,7 @@
         line-height: 22.4px;
         text-decoration: none;
     }
+
     .sso-btn {
         border: 1px solid #ffffff;
         padding: 16px 32px 16px 32px;
@@ -355,7 +434,6 @@
             font-weight: 700;
         }
     }
-
 }
 
 .carousel-inner {

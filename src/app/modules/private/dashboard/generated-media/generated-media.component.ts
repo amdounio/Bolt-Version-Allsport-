@@ -8,7 +8,6 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatchService } from 'src/app/modules/services/match.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '@codetrix-studio/capacitor-google-auth';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 import { GoogleOAuthDto } from 'src/app/core/models/google-auth.dto';

@@ -10,7 +10,6 @@ import { FavoriteSportsComponent } from './favorite-sports/favorite-sports.compo
 import { SharedModule } from '../../../shared/shared.module';
 import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 import { IonicModule } from '@ionic/angular';
-import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
 
 
 @NgModule({

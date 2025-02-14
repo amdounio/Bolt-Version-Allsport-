@@ -1,17 +1,13 @@
-ion-content{
-    background-color: #000000;
-}
 .login-section {
     background-color: #000000;
     padding-top: 50px;
 
-
     .login-card {
         background: radial-gradient(50% 50% at 50% 50%, #1A1A1A 0%, #0B0B0B 100%);
-        padding: 32px 10px 32px 10px;
+        padding: 32px 32px 32px 32px;
         gap: 48px;
         border-radius: 30px;
-        border: 0.3px;
+        border: 0.3px solid rgba(255, 255, 255, 0.1);
 
         .logo {
             width: 89px;
@@ -23,199 +19,86 @@ ion-content{
             font-size: 12px;
             font-weight: 500;
             line-height: 16.8px;
-            text-align: left;
             text-decoration: none;
-            -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
             display: flex;
             align-items: center;
             gap: 10px;
-
+            margin-bottom: 20px;
         }
 
-        .title-card {
-            font-family: 'Blair ITC';
-            font-size: 30px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: left;
-            color: white;
-            text-transform: uppercase;
+        .password-field {
+            position: relative;
 
-        }
+            i {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.6);
+                transition: color 0.3s ease;
 
-        .description-card {
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 19.6px;
-            text-align: left;
-            color: white;
-
-
-        }
-
-        .sso-btn {
-            border: 1px solid #ffffff;
-            padding: 16px 32px 16px 32px;
-            border-radius: 15px;
-            font-family: Inter;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 19.6px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            gap: 10px;
-            width: 100%;
-
-
-            svg {
-                width: 18px;
-                height: 18px;
+                &:hover {
+                    color: rgba(255, 255, 255, 0.9);
+                }
             }
-        }
-
-        .divider-line {
-            background-color: #FFFFFF;
-            width: 250px;
-            color: #FFFFFF;
-            height: 1px;
-        }
-
-        .divider-text {
-
-            color: white;
-        }
-
-        .steper-page-number {
-            font-family: Inter;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 22.4px;
-            text-align: left;
-            color: white;
-        }
-
-
-
-        .form-label {
-            color: white;
-            font-family: Inter;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 16.8px;
-            text-align: left;
-
         }
 
         .form-control {
-            padding: 16px 16px 16px 16px;
+            padding: 16px;
             border-radius: 10px;
-            border: 1px solid #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
-            background-color: #0d0d0d00;
+            background-color: rgba(13, 13, 13, 0);
             font-family: Inter;
             font-size: 14px;
-            font-style: normal;
             font-weight: 300;
             line-height: 16.8px;
-            text-align: left;
 
-        }
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
 
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.644);
-        }
-
-        .accept-checkbox {
-            width: 15px;
-            height: 15px;
-            background-color: white;
-            border-radius: 50%;
-            vertical-align: middle;
-            border: 2px solid #ddd;
-            appearance: none;
-            -webkit-appearance: none;
-            outline: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .accept-checkbox::after {
-            content: "\2713";
-            /* Unicode for check mark */
-            color: #0B0B0B;
-            display: none;
-            font-weight: bold;
-        }
-
-        .accept-checkbox:checked::after {
-            display: block;
+            &:focus {
+                border-color: rgba(255, 255, 255, 0.4);
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
         }
 
         .submit-btn {
-            padding: 7px 30px 7px 30px;
+            padding: 12px;
             border-radius: 15px;
             font-family: Inter;
             font-size: 15px;
             font-weight: 500;
             line-height: 22.4px;
-            text-align: left;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             text-decoration: none;
             gap: 10px;
-            background-color: white;
-            margin-top: 17px;
-        }
+            width: 100%;
+            background-color: transparent;
+            border: 2px solid white;
+            transition: all 0.3s ease;
 
-        .remember-me-txt {
-            font-family: Inter;
-            font-size: 15px;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 16.8px;
-            text-align: left;
-            color: #FFFFFF99;
-        }
-
-        .picsum-img-wrapper {
-            display: flex;
-            height: 790px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px
-        }
-
-        .have-account-text {
-            color: white;
-            font-family: Inter;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 22.4px;
-
-            a {
-                color: white;
-                text-decoration: none;
-                font-weight: 700;
+            &:hover {
+                background-color: white;
+                color: black;
             }
         }
-
-
     }
 }
 
-
-
-
-.carousel-inner {
-    border-radius: 30px !important;
+@media (max-width: 768px) {
+    .login-section {
+        padding-top: 20px;
+        
+        .login-card {
+            padding: 20px;
+            margin: 0 15px;
+        }
+    }
 }

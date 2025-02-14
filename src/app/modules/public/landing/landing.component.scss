@@ -9,6 +9,10 @@
     .logo{
         width: 151px;
     }
+    .sso-btn.disabled {
+        pointer-events: none;
+        opacity: 0.5; /* Optional: Makes it look visually disabled */
+      }
     
     .submit-btn {
         padding: 12px 12px 12px 12px;

@@ -5,10 +5,9 @@
     <section class="login-section">
         <div class="container">
             <div class="login-card d-flex flex-column">
-                <a routerLink="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                <a routerLink="/loading-signin" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
                 <form [formGroup]="form" class="w-100">
                     <div class="d-flex flex-column align-items-center justify-content-center gap-4 w-100">
-
                         <div class="row g-3 w-100">
                             <div class="col-md-6 p-0 ">
                                 <input type="text" formControlName="lastname" placeholder="First name*"
@@ -24,21 +23,21 @@
                                 <input type="email" formControlName="email" class="form-control" id="email"
                                     placeholder="exemple@email.com">
                             </div>
-                            <div class="col-md-12 p-0 ">
-                                <input type="password" formControlName="password" placeholder="Password"
-                                    class="form-control" id="password">
+                            <div class="col-md-12 p-0 password-field">
+                                <input [type]="showPassword ? 'text' : 'password'" formControlName="password" 
+                                    placeholder="Password" class="form-control" id="password">
+                                <i [class]="showPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'" 
+                                   (click)="togglePassword()"></i>
                             </div>
                         </div>
-                        <div class="row g-3 w-100 gap-2 ">
-
-                            <div class="col-md-12 p-0 ">
-                                <input type="password" formControlName="confirmation" placeholder="Confirmation"
-                                    class="form-control" id="confirmation">
+                        <div class="row g-3 w-100 gap-2">
+                            <div class="col-md-12 p-0 password-field">
+                                <input [type]="showPassword ? 'text' : 'password'" formControlName="confirmation" 
+                                    placeholder="Confirmation" class="form-control" id="confirmation">
+                                <i [class]="showPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'" 
+                                   (click)="togglePassword()"></i>
                             </div>
                         </div>
-                        <!-- <div class="gap-2 d-flex justify-content-left align-items-center w-100">
-                        <input type="checkbox" name="accept-legal" formControlName="acceptLegalPolicy" id="accept-legal" class="accept-checkbox"><label class="accept-checkbox-label text-white" for="accept-legal">Yes, I understand and agree to the standley Terms of Service</label>
-                    </div> -->
                     </div>
 
                     <div class="d-flex flex-column align-items-center justify-content-center gap-4 w-100 mt-3">

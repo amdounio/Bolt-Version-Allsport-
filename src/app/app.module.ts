@@ -12,14 +12,15 @@ import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthService, Socia
 import { googleClientId } from './shared/constant';
 
 import { HTTP_INTERCEPTORS, provideHttpClient, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from './core/interceptors/auth.interceptor'; // Existing Auth Interceptor
-import { LoadingInterceptor } from './core/interceptors/loading.interceptor'; // New Loading Interceptor
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NotificationComponent } from './shared/components/notification/notification.component';
 import { LandingComponent } from './modules/public/landing/landing.component';
+import { LoadingSigninComponent } from './modules/public/loading-signin/loading-signin.component';
 import { GoogleSignInButtonComponent } from './shared/components/google-sign-in-button/google-sign-in-button.component';
 import { NgOptimizedImage } from '@angular/common';
 import { AuthGuard } from './core/guards/auth-guard.guard';
@@ -31,6 +32,7 @@ import { NotificationPopupComponent } from './shared/components/notification-pop
     AppComponent,
     LoginComponent,
     LandingComponent,
+    LoadingSigninComponent,
     GoogleSignInButtonComponent,
     NotificationComponent,
     NotificationPopupComponent,
@@ -47,7 +49,7 @@ import { NotificationPopupComponent } from './shared/components/notification-pop
     }),
     NgbModule,
     SharedModule,
-    HttpClientModule, // Ensure HttpClientModule is imported
+    HttpClientModule,
   ],
   providers: [
     NoAuthGuard,
@@ -57,11 +59,11 @@ import { NotificationPopupComponent } from './shared/components/notification-pop
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
-        autoLogin: false, // optional, default is false
+        autoLogin: false,
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(googleClientId), // Replace with your Google Client ID
+            provider: new GoogleLoginProvider(googleClientId),
           },
         ],
         onError: (err: any) => {
@@ -69,10 +71,8 @@ import { NotificationPopupComponent } from './shared/components/notification-pop
         },
       } as SocialAuthServiceConfig,
     },
-    // Add both interceptors here
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
-
     SocialAuthService,
   ],
   bootstrap: [AppComponent],

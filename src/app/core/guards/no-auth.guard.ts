@@ -2,13 +2,12 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { AuthenticationService } from "../services/authentication.service";
-import { User } from "@codetrix-studio/capacitor-google-auth";
+import { SocialLogin } from '@capgo/capacitor-social-login';
 
 @Injectable({
     providedIn: 'root'
 })
 export class NoAuthGuard implements CanActivate {
-    private user: User = <User>{};
 
     constructor(private router: Router, private authService: AuthenticationService) {}
 
@@ -16,20 +15,24 @@ export class NoAuthGuard implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        console.log('NoAuthGuard#canActivate called');
-        const currentUser = this.authService.getUser();
-        console.log('Current User:', currentUser);
+        
+        const currentUser = this.authService.getUser();  // Assuming you have a method in your authService that gets the user
 
-        if (currentUser && currentUser.id) {
-            console.log('User authenticated, redirecting to dashboard');
-            // Prevent navigation loop by only redirecting if the target URL is not the current URL
-            if (state.url !== '/dashboard') {
+        const currentUrl = this.router.url;
+
+        console.log("dashboard");
+        console.log(currentUrl);
+
+        // Check if the user is authenticated, you may want to check this with your authService or SocialLogin directly
+       /* if (currentUser) {
+            // User is authenticated, redirect to dashboard
+            if (currentUrl !== '/register/user-description') {
                 this.router.navigate(['/dashboard']);
+                return false;
             }
-            return false; // Prevent access to the route if the user is authenticated
-        }
-
-        console.log('User not authenticated, access granted');
-        return true; // Allow access if the user is not authenticated
+        }*/
+        
+        // Allow access to login page if no user or user is not authenticated
+        return true;
     }
 }

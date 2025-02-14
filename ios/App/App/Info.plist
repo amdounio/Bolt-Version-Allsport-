@@ -30,6 +30,14 @@
 				<string>com.googleusercontent.apps.50674324828-sd97e6ahs20kbsb9jpgugfbmmlljksqe</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.2points.allsports</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
@@ -63,14 +71,19 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app needs access to your photo library to share images.</string>
 	<key>WKAppBoundDomains</key>
-	<array>
-		<string>srv620695.hstgr.cloud</string>
-	</array>
+<array>
+    <string>srv620695.hstgr.cloud</string> <!-- Your redirect domain -->
+    <string>appleid.apple.com</string>    <!-- Apple SSO domain -->
+    <string>idmsa.apple.com</string>      <!-- Apple ID services domain -->
+</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
 	</array>
+	
 </dict>
+
+
 </plist>

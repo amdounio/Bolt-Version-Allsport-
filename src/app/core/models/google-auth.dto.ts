@@ -3,11 +3,12 @@ export interface GoogleOAuthDto {
     id: string;
     name: string;
     email: string;
-    pasword? : string;
+    password?: string;
     photoUrl: string;
     firstName: string;
     lastName: string;
     provider: string;
-    acceptLegalPolicy? : boolean;
-    newUser? : boolean;
+    acceptLegalPolicy?: boolean;
+    newUser?: boolean;
+    rememberMe?: boolean; // Added rememberMe property
 }

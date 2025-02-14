@@ -1,30 +1,29 @@
-
 <ion-content>
-
 <section class="landing-page d-flex flex-column align-items-center justify-content-end">
     <div class="container d-flex flex-column align-items-center gap-4 mb-4">
       <img src="assets/images/logo.png" class="logo" alt="">
         
-        <div   [formGroup]="form" class="d-flex flex-column align-items-center justify-content-center gap-4 w-100">
-            <!-- <div class="d-flex align-items-center justify-content-center gap-4">
-                <hr class="divider-line m-0"> <p class="divider-text m-0">or</p> <hr class="divider-line m-0">
-            </div> -->
-            
+        <div [formGroup]="form" class="d-flex flex-column align-items-center justify-content-center gap-4 w-100">
             <div class="row g-3 w-100 gap-2">
                 <div class="col-12 p-0">
                     <input type="email" formControlName="email" class="form-control" id="email" placeholder="exemple@email.com">
-                  </div>
-                  <div class="col-md-12 p-0">
-                      <input type="password" formControlName="password" placeholder="********" class="form-control" id="password">
-                    </div>
+                </div>
+                <div class="col-md-12 p-0 password-field">
+                    <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="********" class="form-control" id="password">
+                    <i [class]="showPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'" (click)="togglePassword()"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" formControlName="rememberMe">
+                    <label class="form-check-label remember-me-txt" for="rememberMe">Remember me</label>
+                </div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center gap-2">
                <button class="btn submit-btn" (click)="submit()">Se connecter</button>
-               <p class="remember-me-txt"><a routerLink="/">Je n’ai pas de compte. Je m’inscris</a></p>
+               <p class="remember-me-txt"><a routerLink="/loading-signin">Je n'ai pas de compte. Je m'inscris</a></p>
             </div>
         </div>
-        
-      </div>
-  </section>
-
+    </div>
+</section>
 </ion-content>
